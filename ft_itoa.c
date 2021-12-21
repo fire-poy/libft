@@ -6,12 +6,12 @@
 /*   By: mpons <marvin@42lausanne.ch>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/04 15:50:43 by mpons             #+#    #+#             */
-/*   Updated: 2021/11/05 10:39:15 by mpons            ###   ########.fr       */
+/*   Updated: 2021/11/08 11:56:00 by mpons            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
 
-int	ft_taille(int n)
+static int	ft_taille(int n)
 {
 	int	i;
 
@@ -26,7 +26,7 @@ int	ft_taille(int n)
 	return (i);
 }
 
-void	ft_nbr_to_str(long n, char *s, int len)
+static void	ft_nbr_to_str(long n, char *s, int len)
 {
 	s[len] = '\0';
 	if (n == 0)

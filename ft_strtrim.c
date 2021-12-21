@@ -6,12 +6,12 @@
 /*   By: mpons <marvin@42lausanne.ch>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/01 20:01:00 by mpons             #+#    #+#             */
-/*   Updated: 2021/11/05 15:26:13 by mpons            ###   ########.fr       */
+/*   Updated: 2021/11/08 12:02:05 by mpons            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
 
-int	ft_c_vs_charset(char c, const char *cs)
+static int	ft_c_vs_charset(char c, const char *cs)
 {
 	int	i;
 
@@ -24,7 +24,7 @@ int	ft_c_vs_charset(char c, const char *cs)
 		return (0);
 }
 
-int	ft_quantite_trimer_debut(const char *s, const char *cs)
+static int	ft_quantite_trimer_debut(const char *s, const char *cs)
 {	
 	int	i;
 
@@ -34,7 +34,7 @@ int	ft_quantite_trimer_debut(const char *s, const char *cs)
 	return (i);
 }
 
-int	ft_quantite_trimer_fin(const char *s, const char *cs)
+static int	ft_quantite_trimer_fin(const char *s, const char *cs)
 {	
 	int	i;
 	int	len;

@@ -6,7 +6,7 @@
 #    By: mpons <marvin@42lausanne.ch>               +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/04 14:25:48 by mpons             #+#    #+#              #
-#    Updated: 2021/11/08 09:47:19 by mpons            ###   ########.fr        #
+#    Updated: 2021/11/11 21:05:24 by mpons            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -45,9 +45,19 @@ SRCS		= ft_isalpha.c\
 			  ft_putendl_fd.c\
 			  ft_putnbr_fd.c\
 
-HEADERS		= libft.h
+BONUS		= ft_lstnew.c\
+			  ft_lstadd_front.c\
+			  ft_lstsize.c\
+			  ft_lstlast.c\
+			  ft_lstadd_back.c\
+			  ft_lstdelone.c\
+			  ft_lstclear.c\
+			  ft_lstiter.c\
+			  ft_lstmap.c\
 
 OBJS		= ${SRCS:.c=.o}
+
+B_OBJS		= ${BONUS:.c=.o}
 
 NAME 		= libft.a
 
@@ -70,12 +80,16 @@ ${NAME}: 	${OBJS}
 
 all:		${NAME}
 
+bonus:		${OBJS} ${B_OBJS}
+		 	${LIB} ${NAME} ${OBJS} ${B_OBJS}
+			${RAN} ${NAME}
+
 clean:
-			${RM} ${OBJS}
+			${RM} ${OBJS} ${B_OBJS}
 
 fclean:		clean
 			${RM} ${NAME}
 
 re:			fclean all
 
-.PHONY:		all clean fclean re
+.PHONY:		all clean fclean re bonus

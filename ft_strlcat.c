@@ -6,7 +6,7 @@
 /*   By: mpons <marvin@42lausanne.ch>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/03 14:31:26 by mpons             #+#    #+#             */
-/*   Updated: 2021/11/03 15:30:59 by mpons            ###   ########.fr       */
+/*   Updated: 2021/12/18 16:15:29 by mpons            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
@@ -30,7 +30,27 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	}
 	dst[i] = '\0';
 	return (len_s + len_d);
+}	
+/*
+size_t  ft_strlcat(char *dst, const char *src, size_t dstsize)
+{
+    size_t  a;
+    size_t  d;
+
+    a = 0;
+    d = ft_strlen(dst);
+    while ((int)dstsize > ft_strlen(dst) + 1 && src[a] != 0)
+    {
+        dst[a + d] = src[a];
+        a++;
+    }
+    dst[a + d] = 0;
+    if (d > dstsize)
+        return(dstsize + ft_strlen(src));
+    else
+        return(d + ft_strlen(src));
 }
+*/
 //dstsize no tiene que ser mas largo que la taille de dest
 //dstsize es el espacio en memoria(buffer) que hay en dst char buffer[50];
 //dst size = 50
